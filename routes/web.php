@@ -17,6 +17,6 @@ Route::get('/articles/{article}', 'ArticlesController@show')->name('articles.sho
 Route::put('/articles/{article}', 'ArticlesController@update')->name('articles.update');
 Route::get('/articles/{article}/edit', 'ArticlesController@edit')->name('articles.edit');
 
-
-
 // Route::get('/posts/{slug}', 'PostController@show');
+
+Route::get('/tags/{tag}', 'TagsController@show')->name('tags.show');

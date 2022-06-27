@@ -9,6 +9,10 @@ class ArticlesController extends Controller
 {
     public function index(){
 
+        if(request('tag')){
+            
+        }
+
         return view('articles.index', ['articles' => Article::latest()->get()]);
     }
     public function show(Article $article){
