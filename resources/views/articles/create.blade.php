@@ -42,6 +42,22 @@
                             <p class="is-danger">{{ $errors->first('body')}}</p>
                         @enderror
                 </div>
+
+                <div class="field">
+                    <label for="tags" class="label">Tags</label>
+                    
+                    <div class="select is-multiple">
+                        <select name="tags[]" multiple id="tags">
+                            @foreach ($tags as $tag)
+                                <option value="{{ $tag->id }}">{{ $tag->name }}</option>
+                            @endforeach
+                        </select>
+                    </div>
+                    @error('tags')
+                        <p class="is-danger">{{ $message }}</p>
+                    @enderror
+                </div>
+
                 <div class="field is-grouped">
                     <div class="control">
                         <button class="button is-link" type="submit">Submit</button>
