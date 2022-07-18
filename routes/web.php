@@ -20,3 +20,6 @@ Route::get('/articles/{article}/edit', 'ArticlesController@edit')->name('article
 // Route::get('/posts/{slug}', 'PostController@show');
 
 Route::get('/tags/{tag}', 'TagsController@show')->name('tags.show');
+
+Route::get('/contact', 'ContactController@create');
+Route::post('/contact', 'ContactController@store');
